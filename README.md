@@ -1,15 +1,19 @@
 # Elastic Demo
 ## Contents
 1.  [Summary](#summary)
-2.  [Features](#features)
-3.  [Prerequisites](#prerequisites)
-4.  [Installation](#installation)
-5.  [Usage](#usage)
+2.  [Architecture](#architecture)
+3.  [Features](#features)
+4.  [Prerequisites](#prerequisites)
+5.  [Installation](#installation)
+6.  [Usage](#usage)
 
 ## Summary <a name="summary"></a>
 This is a demo of usage of Elastic as a vector store for Retrieval Augmented Generation (RAG) for this scenario:
 - Pure LangChain Expression Language (LCEL) chain with no safeguards on user or LLM interactions
 - Content from the Elastic online documentation of Elastic Vector Search is used for the RAG content.  
+
+## Architecture <a name="architecture"></a>
+![architecture](https://docs.google.com/drawings/d/e/2PACX-1vT1SaE93nACe1P8y8AwFLehGty9PbD0UQ8ReP_g9XhjPx5nJPdT_8qzJaPWPdfZin1GuLx5RIXXhtfy/pub?w=815&h=713)
 
 ## Features <a name="features"></a>
 - Elastic Search for the vector store
