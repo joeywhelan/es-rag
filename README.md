@@ -1,4 +1,4 @@
-# Elastic Demo
+# Elastic RAG Demo
 ## Contents
 1.  [Summary](#summary)
 2.  [Architecture](#architecture)
