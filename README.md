@@ -29,7 +29,7 @@ pip install -qU python-dotenv langchain_elasticsearch bs4 langchain langchain_op
 - Edit the .env_template file with your OpenAI key, Elastic Cloud ID, and Elastic Cloud API Key and rename the file to .env
 
 ## Usage <a name="usage"></a>
-### Environment Start Up
+### Start Up
 ```bash
 python3 esload.py
 chainlit run bot.py --host=0.0.0.0 --port=8000
