@@ -17,6 +17,8 @@ This is a demo of usage of Elastic as a vector store for Retrieval Augmented Gen
 - LangChain implementation of RAG with Elastic
 
 ## Prerequisites <a name="prerequisites"></a>
+- Elastic cloud ID and API key
+- OpenAI API key
 - python3
 - git
 - pip
