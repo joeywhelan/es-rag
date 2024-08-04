@@ -8,9 +8,10 @@ load_dotenv(override=True)
 question = "What does a k-nearest neighbor search do?"
 
 retriever = ElasticsearchStore(
-        es_cloud_id=os.getenv('ELASTIC_CLOUD_ID'),
-        es_api_key=os.getenv('ELASTIC_API_KEY'),
-        index_name='rag_demo',
+        es_url="http://localhost:9200",
+        es_user="elastic",
+        es_password="elastic",
+        index_name=os.getenv('ELASTIC_INDEX'),
         embedding=OpenAIEmbeddings()
 ).as_retriever()
 

@@ -21,22 +21,21 @@ This is a demo of usage of Elastic as a vector store for Retrieval Augmented Gen
 - LangChain implementation of RAG with Elastic
 
 ## Prerequisites <a name="prerequisites"></a>
-- Elastic cloud ID and API key
 - OpenAI API key
-- python3
-- git
-- pip
+- docker compose
 
 ## Installation <a name="installation"></a>
 ```bash
 git clone https://github.com/joeywhelan/es-rag.git && cd es-rag
-pip install -qU python-dotenv langchain_elasticsearch bs4 langchain langchain_openai langchainhub chainlit
 ```
 - Edit the .env_template file with your OpenAI key, Elastic Cloud ID, and Elastic Cloud API Key and rename the file to .env
 
 ## Usage <a name="usage"></a>
 ### Start Up
 ```bash
-python3 esload.py
-chainlit run bot.py --host=0.0.0.0 --port=8000
+./start.sh
+```
+### Shut Down
+```bash
+./stop.sh
 ```

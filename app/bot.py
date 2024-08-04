@@ -7,17 +7,21 @@ from langchain_core.runnables import RunnablePassthrough, RunnableParallel, Runn
 from langchain_core.output_parsers import StrOutputParser
 from langchain_elasticsearch import ElasticsearchStore
 import chainlit as cl
+from esload import load
 
 load_dotenv(override=True)
+load()
 
 def build_chain() -> Runnable:
+
     retriever = ElasticsearchStore(
-        es_cloud_id=os.getenv('ELASTIC_CLOUD_ID'),
-        es_api_key=os.getenv('ELASTIC_API_KEY'),
+        es_url="http://elasticsearch:9200",
+        es_user="elastic",
+        es_password="elastic",
         index_name=os.getenv('ELASTIC_INDEX'),
         embedding=OpenAIEmbeddings()
     ).as_retriever()
-    
+        
     chain: Runnable = (
         { 'chat_history': RunnablePassthrough(), 'input': RunnablePassthrough() }
         | hub.pull("joeywhelan/rephrase")
