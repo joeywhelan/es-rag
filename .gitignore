@@ -1,4 +1,5 @@
 .venv
 .env
 .chainlit
+misc.sh
 __pycache__
